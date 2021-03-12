@@ -2,11 +2,6 @@
 pipeline {
 
   agent any
-<<<<<<< HEAD:jenkinsfile
-  
-=======
- 
->>>>>>> 64d51e33256ea76003ea1b16bbdba6b65dce9db1:jenkinsfile.txt
 
   options {
     disableConcurrentBuilds()
