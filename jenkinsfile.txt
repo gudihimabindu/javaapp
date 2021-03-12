@@ -18,7 +18,7 @@ pipeline {
            log.outputBanner('Checkout from Corelight Helm charts repository')
           
             dir('my-bmw-corelight-charts') {
-               git credentialsId: '62fad565-6f44-4f5f-a7c1-62297b0c73bb', url: 'https://github.com/gudihimabindu/Sonar-gradle.git'
+               git credentialsId: '62fad565-6f44-4f5f-a7c1-62297b0c73bb', url: 'https://github.com/gudihimabindu/javaapp.git'
             }
          }
       }   
