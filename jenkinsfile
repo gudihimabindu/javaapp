@@ -19,12 +19,11 @@ pipeline {
      }
    stage('Build') {
       steps {
-        script {
+        
           withgradle(){
               sh './gradlew -v'
               
           }
-        }
       }
     }
   }  
