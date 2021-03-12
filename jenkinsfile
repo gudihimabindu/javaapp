@@ -4,6 +4,7 @@ pipeline {
 
   agent any
   tools {
+      java  'jdk-8' 
       gradle 'Gradle-5.0'
    }
 
