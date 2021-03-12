@@ -29,10 +29,12 @@ pipeline {
       }
     }
     stage ('Gradle Static Analysis'){
-       withSonarQubeEnv {
-         sh "gradle clean sonarqube"
+      steps{
+        withSonarQubeEnv {
+           sh "gradle clean sonarqube"
         }
-    }
+      }
+    }  
     
     
     
