@@ -2,9 +2,7 @@
 pipeline {
 
   agent any
-  tools{
-   gradle 'Gradle-5.0'
-  }
+ 
 
   options {
     disableConcurrentBuilds()
@@ -29,7 +27,9 @@ pipeline {
           log.outputBanner('Building backend')
 
           dir('my-bmw-corelight-back-end') {
-            sh 'gradle clean build'
+             withgradle(){
+              sh './gradlew -v'
+              }
           }
         }
       }
