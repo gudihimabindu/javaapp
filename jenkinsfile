@@ -3,8 +3,8 @@ pipeline {
 
 
   agent any
-  tools{
-  gradle 'Gradle-5.0'
+  tools {
+   rtgradle 'Gradle-5.0'
    }
 
   options {
