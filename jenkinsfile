@@ -26,8 +26,21 @@ pipeline {
       steps {
           sh 'java -version'
           sh 'gradle build'
-             
       }
     }
+    stage ('Gradle Static Analysis'){
+       withSonarQubeEnv {
+         sh "gradle clean sonarqube"
+        }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
   }  
 }
