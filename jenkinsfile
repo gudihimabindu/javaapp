@@ -24,8 +24,8 @@ pipeline {
      }
    stage('Build') {
       steps {
-        
-          sh 'gradle run'
+          sh 'java -version'
+          //sh 'gradle run'
              
       }
     }
