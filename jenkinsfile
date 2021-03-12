@@ -30,9 +30,13 @@ pipeline {
     }
     stage ('Gradle Static Analysis'){
       steps{
-        withSonarQubeEnv {
+        script {
+          // requires SonarQube Scanner 2.8+
+          scannerHome = tool 'SonarQube Scanner 2.8'
+         } 
+          withSonarQubeEnv('sonarqube') {
            sh "gradle clean sonarqube"
-        }
+         }
       }
     }  
     
