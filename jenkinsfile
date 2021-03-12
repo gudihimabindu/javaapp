@@ -21,7 +21,7 @@ pipeline {
       steps {
         
           withGradle(){
-              sh './Gradlew -v'
+              sh './gradlew -v'
               
           }
       }
