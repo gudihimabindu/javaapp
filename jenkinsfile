@@ -1,7 +1,11 @@
 
 pipeline {
 
+
   agent any
+  tools{
+  gradle 'Gradle-5.0'
+   }
 
   options {
     disableConcurrentBuilds()
@@ -20,10 +24,8 @@ pipeline {
    stage('Build') {
       steps {
         
-          withGradle(){
-              sh 'gradle -v'
-              
-          }
+          
+              sh 'gradle -v'    
       }
     }
   }  
