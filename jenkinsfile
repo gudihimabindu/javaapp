@@ -32,10 +32,9 @@ pipeline {
       steps{
         script {
           echo 'this is sonar'
-         } 
-          withSonarQubeEnv('sonarqube') {
+         
            sh "gradle sonarqube -Dsonar.login=58a9613b69a2bd5ec4f112d5488d909229ae66e1  -Dsonar.projectKey=javaapp -Dsonar.analysis.mode=publish -Dsonar.host.url=http://ec2-3-129-209-49.us-east-2.compute.amazonaws.com:9000/"
-         }
+         
       }
     }  
   }  
