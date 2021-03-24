@@ -10,7 +10,7 @@ version = '1.0'
 
 sonarqube {
     properties {
-        property 'sonar.projectName', 'gradle project'
+        property 'sonar.projectName', 'gradle project'.
        
     }
 }
