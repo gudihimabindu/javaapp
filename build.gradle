@@ -2,7 +2,7 @@ plugins {
     id "jacoco"
     id "java"
     id "application"
-    id "org.sonarqube" version "3.0"
+   
 }
 
 description = 'Example of SonarQube Scanner for Gradle Usage'
@@ -10,7 +10,8 @@ version = '1.0'
 
 sonarqube {
     properties {
-        property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
+        property 'sonar.projectName', 'gradle project'.
+        property 'sonar.login', 'eec30734eb2fb25d4f1e8bf3937bb9ed73f32ab1'.
     }
 }
 
@@ -27,7 +28,9 @@ dependencies {
 
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
+  classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7" 
 }
+apply plugin: 'org.sonarqube'
 
 // Define the main class for the application
 mainClassName = 'App'
