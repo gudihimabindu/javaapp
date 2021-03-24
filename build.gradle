@@ -8,12 +8,7 @@ plugins {
 description = 'Example of SonarQube Scanner for Gradle Usage'
 version = '1.0'
 
-sonarqube {
-    properties {
-        property 'sonar.login', 'eec30734eb2fb25d4f1e8bf3937bb9ed73f32ab1'
-        property 'sonar.host.url', 'http://ec2-3-129-209-49.us-east-2.compute.amazonaws.com:9000/'
-    }
-}
+
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -31,6 +26,13 @@ dependencies {
   classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.7" 
 }
 apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property 'sonar.login', 'eec30734eb2fb25d4f1e8bf3937bb9ed73f32ab1'
+        property 'sonar.host.url', 'http://ec2-3-129-209-49.us-east-2.compute.amazonaws.com:9000/'
+    }
+}
 
 // Define the main class for the application
 mainClassName = 'App'
